@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pose Landmark Detection</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.0/vision_bundle.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Pose Landmark Detection</h1>
+        <p>Real-time pose detection using MediaPipe</p>
+    </header>
+
+    <main>
+        <div class="video-container">
+            <video id="video" autoplay muted playsinline></video>
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">Start Camera</button>
+            <button id="stopBtn" class="btn btn-secondary" disabled>Stop Camera</button>
+            <button id="demoBtn" class="btn btn-accent">Start Demo Mode</button>
+            <button id="toggleSendBtn" class="btn btn-accent" disabled>Enable Data Sending</button>
+        </div>
+
+        <div class="status">
+            <div class="status-item">
+                <span class="label">Camera:</span>
+                <span id="cameraStatus" class="status-value">Not started</span>
+            </div>
+            <div class="status-item">
+                <span class="label">Pose Detection:</span>
+                <span id="poseStatus" class="status-value">Waiting</span>
+            </div>
+            <div class="status-item">
+                <span class="label">Data Sending:</span>
+                <span id="sendStatus" class="status-value">Disabled</span>
+            </div>
+            <div class="status-item">
+                <span class="label">Landmarks Sent:</span>
+                <span id="landmarkCount" class="status-value">0</span>
+            </div>
+        </div>
+
+        <div class="info">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Click "Start Camera" to begin webcam access</li>
+                <li>Position yourself in front of the camera</li>
+                <li>Enable "Data Sending" to transmit landmarks to server</li>
+                <li>Pose landmarks will be detected and visualized in real-time</li>
+            </ol>
+        </div>
+
+        <div class="landmark-info">
+            <h3>Last Detection Info:</h3>
+            <div id="landmarkDetails">No pose detected yet</div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
