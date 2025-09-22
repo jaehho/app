@@ -1,0 +1,11 @@
+name = "pose-landmark-app"
+main = "server.js"
+compatibility_date = "2023-12-01"
+
+[env.production]
+name = "pose-landmark-app"
+
+[[env.production.kv_namespaces]]
+binding = "POSE_DATA"
+id = "your-kv-namespace-id-here"
+preview_id = "your-preview-kv-namespace-id-here"

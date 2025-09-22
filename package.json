@@ -1,0 +1,22 @@
+{
+  "name": "pose-landmark-webapp",
+  "version": "1.0.0",
+  "description": "Web app for pose landmark detection using MediaPipe",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'No build step required for this project'"
+  },
+  "keywords": ["mediapipe", "pose", "landmarks", "webcam", "computer-vision"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
